@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPSmP Network | Minecraft Lifesteal Server</title>
+    <!-- Tailwind CSS for utility architecture -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0914;
+            color: #f1f5f9;
+        }
+        .heading-style {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-banner {
+            background: linear-gradient(rgba(11, 9, 20, 0.8), rgba(11, 9, 20, 0.98)), 
+                        url('https://placehold.co');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-box {
+            background: rgba(22, 19, 44, 0.5);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(192, 132, 252, 0.15);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(192, 132, 252, 0.25);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Global Navigation -->
+    <nav class="glass-box sticky top-0 z-50 px-4 py-3 lg:px-8 border-b border-purple-500/10">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-purple-600 to-pink-500 rounded-xl flex items-center justify-center font-black text-xl text-white shadow-md shadow-purple-500/20">P</div>
+                <span class="text-2xl font-black tracking-wider heading-style bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">POPSmP</span>
+            </div>
+            
+            <button onclick="toggleMenu()" class="md:hidden text-gray-300 hover:text-white transition-colors">
+                <i id="menu-btn" class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <div class="hidden md:flex items-center space-x-8 font-semibold tracking-wide text-sm">
+                <a href="#home" class="text-purple-300 hover:text-white transition-colors">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-purple-400 transition-colors">Features</a>
+                <a href="#rules" class="text-gray-300 hover:text-purple-400 transition-colors">Rulebook</a>
+                <a href="#staff" class="text-gray-300 hover:text-purple-400 transition-colors">Team</a>
+                <a href="#apply" class="text-gray-300 hover:text-purple-400 transition-colors">Apply</a>
+                <a href="https://tebex.io" target="_blank" class="px-4 py-2 bg-pink-600 hover:bg-pink-500 text-white rounded-xl transition-all shadow-md shadow-pink-900/40 flex items-center gap-2"><i class="fas fa-shopping-cart"></i> Store</a>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-drawer" class="hidden md:hidden mt-3 pt-2 pb-4 space-y-3 border-t border-purple-500/10 text-center">
+            <a href="#home" onclick="toggleMenu()" class="block text-gray-300 hover:text-purple-400 py-1">Home</a>
+            <a href="#about" onclick="toggleMenu()" class="block text-gray-300 hover:text-purple-400 py-1">Features</a>
+            <a href="#rules" onclick="toggleMenu()" class="block text-gray-300 hover:text-purple-400 py-1">Rulebook</a>
+            <a href="#staff" onclick="toggleMenu()" class="block text-gray-300 hover:text-purple-400 py-1">Team</a>
+            <a href="#apply" onclick="toggleMenu()" class="block text-gray-300 hover:text-purple-400 py-1">Apply</a>
+            <a href="https://tebex.io" target="_blank" class="block text-pink-400 font-bold py-1"><i class="fas fa-shopping-cart"></i> Webstore</a>
+        </div>
+    </nav>
+
+    <!-- Main Splash Header -->
+    <header id="home" class="hero-banner min-h-[92vh] flex items-center justify-center text-center px-4 relative">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-bold uppercase tracking-widest">
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-ping"></span> 108 Players Connected
+            </div>
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight heading-style text-white">
+                Survival Redefined <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-400">POPSmP Lifesteal</span>
+            </h1>
+            <p class="text-base sm:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Welcome to the high-intensity arena of POPSmP. Eliminate players to extract extra hearts, forge heavy base factions, and rise through the network ranks! [image_ypK80h.png, image_cUoHVX.png]
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 max-w-md mx-auto">
+                <div class="w-full bg-black/50 border border-purple-500/20 rounded-xl px-4 py-3.5 flex items-center justify-between font-mono text-purple-300 text-sm">
+                    <span id="ip-address">://popsmpnetwork.com</span>
+                    <button onclick="copyIP()" class="ml-2 text-gray-400 hover:text-purple-400 transition-colors" title="Copy IP Token">
+                        <i id="copy-btn" class="far fa-copy"></i>
+                    </button>
+                </div>
+                <a href="https://discord.gg" target="_blank" class="w-full sm:w-auto px-6 py-4 bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/10 transition-all">
+                    <i class="fab fa-discord text-lg"></i> Server Discord
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Sections Matrix -->
+    <main class="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 space-y-32">
+
+        <!-- Grid Attributes -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-box p-8 rounded-2xl card-glow transition-all duration-300">
+                <div class="w-12 h-12 bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-heartbeat"></i></div>
+                <h3 class="text-lg font-bold heading-style text-white mb-2">Lifesteal Economy</h3>
+                <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Every operational target taken down transfers a heart container over to your asset pool. Dropping to zero results in a temporary system ban! [image_ypK80h.png]</p>
+            </div>
+            <div class="glass-box p-8 rounded-2xl card-glow transition-all duration-300">
+                <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/30 text-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-code"></i></div>
+                <h3 class="text-lg font-bold heading-style text-white mb-2">Custom Developer Sync</h3>
+                <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Managed cleanly via customized RCON pipelines and cross-chat webhooks for complete crossplay interaction log monitoring.</p>
+            </div>
+            <div class="glass-box p-8 rounded-2xl card-glow transition-all duration-300">
+                <div class="w-12 h-12 bg-pink-500/10 border border-pink-500/30 text-pink-400 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-bolt"></i></div>
+                <h3 class="text-lg font-bold heading-style text-white mb-2">Premium Milestones</h3>
+                <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Boost the server network to claim 7-day to 20-day high-tier Booster Ranks equipped with dedicated chat styles. [image_cUoHVX.png]</p>
+            </div>
+        </section>
+
+        <!-- Dynamic Drop-down Accordion Rulebook -->
+        <section id="rules" class="max-w-3xl mx-auto space-y-6">
+            <div class="text-center space-y-2 mb-10">
+                <h2 class="text-3xl font-extrabold heading-style text-white">📜 Server Rulebook</h2>
+                <p class="text-gray-400 text-sm">Review operational guidelines to avoid instant system mutes or temporary bans.</p>
+            </div>
+
+            <!-- Accordion 1 -->
+            <div class="glass-box rounded-xl overflow-hidden">
+                <button onclick="toggleAccordion('acc1')" class="w-full p-5 text-left font-bold flex justify-between items-center text-sm sm:text-base text-purple-300 hover:bg-purple-900/10 transition-colors">
+                    <span><i class="fab fa-discord mr-2"></i> Section I: Discord Network Guidelines</span>
+                    <i id="acc1-icon" class="fas fa-chevron-down text-xs transition-transform"></i>
+                </button>
+                <div id="acc1-content" class="hidden p-5 bg-black/20 border-t border-purple-500/10 text-xs sm:text-sm text-gray-400 space-y-2">
+                    <p>• Avoid excessive user tagging or spam lines across open text chats. [image_ZeiKoN.png]</p>
+                    <p>• Zero toxicity, slurs, threats, or unsolicited advertisement DMs permitted under any condition.</p>
+                    <p>• Keep all uploaded links and clips completely safe-for-work (SFW).</p>
+                </div>
+            </div>
