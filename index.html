@@ -3,152 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POPSmP Network | Official Player Hub</title>
-    <!-- Tailwind CSS Engine -->
+    <title>POPSmP | Home</title>
+    <!-- Tailwind CSS for authentic spacing framework -->
     <script src="https://tailwindcss.com"></script>
-    <!-- FontAwesome Library for Battle Icons -->
+    <!-- FontAwesome Vector Library -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    <!-- Premium Google Fonts -->
+    <!-- Clean Interface Typography -->
     <link href="https://googleapis.com" rel="stylesheet">
     
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #06040d;
+            background-color: #0d0a14;
             color: #f1f5f9;
         }
-        .font-header {
-            font-family: 'Montserrat', sans-serif;
-        }
-        /* BattlePie Premium Deep Indigo Gradient Mesh */
-        .battle-hero {
-            background: radial-gradient(circle at top, rgba(107, 33, 168, 0.25) 0%, rgba(6, 4, 13, 1) 70%),
-                        linear-gradient(rgba(6, 4, 13, 0.7), rgba(6, 4, 13, 0.95)), 
+        /* Top radial dim ambiance exactly matching user image */
+        .battle-overlay-bg {
+            background: radial-gradient(circle at 50% 20%, rgba(88, 28, 135, 0.15) 0%, rgba(13, 10, 20, 1) 60%),
+                        linear-gradient(rgba(13, 10, 20, 0.4), rgba(13, 10, 20, 1)),
                         url('https://placehold.co');
             background-size: cover;
             background-position: center;
         }
-        /* Sleek Cybernetic Panels with subtle purple glow boundaries */
-        .cyber-box {
-            background: rgba(15, 11, 28, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(139, 92, 246, 0.15);
-            box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.05);
+        /* Exact gray-tinted slate outline boxes matching battlepie reference image */
+        .premium-card {
+            background: rgba(18, 14, 28, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .btn-glow-purple {
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-            transition: all 0.3s ease;
-        }
-        .btn-glow-purple:hover {
-            box-shadow: 0 0 35px rgba(139, 92, 246, 0.6);
-            transform: translateY(-2px);
-        }
-        .btn-glow-pink {
-            box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
-            transition: all 0.3s ease;
-        }
-        .btn-glow-pink:hover {
-            box-shadow: 0 0 35px rgba(236, 72, 153, 0.6);
-            transform: translateY(-2px);
-        }
-        .neon-text-glow {
-            text-shadow: 0 0 15px rgba(167, 139, 250, 0.5);
+        .text-glow {
+            text-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
         }
     </style>
 </head>
-<body class="overflow-x-hidden selection:bg-purple-600 selection:text-white">
+<body class="battle-overlay-bg min-h-screen selection:bg-purple-600 selection:text-white overflow-x-hidden">
 
-    <!-- Global Responsive Navigation Bar -->
-    <nav class="cyber-box sticky top-0 z-50 px-4 py-3.5 lg:px-8 border-b border-purple-500/10">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            
-            <div class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-500 rounded-xl flex items-center justify-center font-black text-xl text-white shadow-lg shadow-purple-500/30 transform group-hover:rotate-6 transition-transform">P</div>
-                <span class="text-2xl font-black tracking-tighter font-header bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-300">POPSmP</span>
-            </div>
-            
-            <!-- Mobile Menu Toggle Button -->
-            <button onclick="toggleNavigation()" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
-                <i id="nav-toggle-icon" class="fas fa-bars text-2xl"></i>
-            </button>
-
-            <!-- Desktop Menu Options -->
-            <div class="hidden md:flex items-center space-x-8 font-bold tracking-wide text-xs uppercase">
-                <a href="#home" class="text-purple-400 hover:text-white transition-colors">Home</a>
-                <a href="#gamemodes" class="text-gray-400 hover:text-purple-400 transition-colors">Gamemodes</a>
-                <a href="#rules" class="text-gray-400 hover:text-purple-400 transition-colors">Rules</a>
-                <a href="#staff" class="text-gray-400 hover:text-purple-400 transition-colors">Our Team</a>
-                <a href="#apply" class="text-gray-400 hover:text-purple-400 transition-colors">Apply</a>
-                <a href="https://tebex.io" target="_blank" class="px-5 py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-xl btn-glow-pink flex items-center gap-2 tracking-widest text-[11px]"><i class="fas fa-shopping-basket animate-pulse"></i> Webstore</a>
-            </div>
+    <!-- Header Navigation Section [image_dWdozg.png] -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between border-b border-white/5">
+        <!-- Logo and Server Name Left Alignment -->
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-gradient-to-tr from-purple-600 to-pink-500 rounded-lg flex items-center justify-center font-bold text-base text-white">P</div>
+            <span class="text-lg font-bold tracking-tight text-white">POPSmP</span>
         </div>
 
-        <!-- Mobile Drawer Viewport -->
-        <div id="mobile-drawer" class="hidden md:hidden mt-3 pt-3 pb-2 space-y-3 border-t border-purple-900/40 text-center text-sm font-semibold uppercase tracking-wider">
-            <a href="#home" onclick="toggleNavigation()" class="block text-gray-300 hover:text-purple-400 py-1">Home</a>
-            <a href="#gamemodes" onclick="toggleNavigation()" class="block text-gray-300 hover:text-purple-400 py-1">Gamemodes</a>
-            <a href="#rules" onclick="toggleNavigation()" class="block text-gray-300 hover:text-purple-400 py-1">Rules</a>
-            <a href="#staff" onclick="toggleNavigation()" class="block text-gray-300 hover:text-purple-400 py-1">Our Team</a>
-            <a href="#apply" onclick="toggleNavigation()" class="block text-gray-300 hover:text-purple-400 py-1">Apply</a>
-            <a href="https://tebex.io" target="_blank" class="block text-pink-400 font-bold py-1"><i class="fas fa-shopping-basket"></i> Store Portal</a>
+        <!-- Center Direct Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+            <a href="#home" class="text-white border-b-2 border-purple-500 pb-1">Home</a>
+            <a href="https://tebex.io" target="_blank" class="hover:text-white transition-colors">Store</a>
+            <a href="https://discord.gg" target="_blank" class="hover:text-white transition-colors">Discord</a>
+        </div>
+
+        <!-- Right Side Shopping Cart & Auth Action Buttons -->
+        <div class="flex items-center space-x-4">
+            <button class="text-gray-400 hover:text-white p-2 text-lg" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+            <a href="https://discord.gg" target="_blank" class="px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition-colors flex items-center gap-2">
+                <i class="fas fa-sign-in-alt"></i> Login / Register
+            </a>
         </div>
     </nav>
 
-    <!-- Hero / Presentation Hub Segment -->
-    <header id="home" class="battle-hero min-h-[95vh] flex items-center justify-center text-center px-4 relative">
-        <div class="max-w-4xl mx-auto space-y-8">
-            <!-- Active Counter Box -->
-            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-300 text-xs font-bold uppercase tracking-widest shadow-inner shadow-purple-500/10">
-                <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse shadow-md shadow-green-400"></span> 
-                <span>Battle Network Live</span> 
-                <span class="text-gray-500">|</span> 
-                <span class="text-white">492 Players</span>
-            </div>
+    <!-- Content Split Blocks [image_dWdozg.png] -->
+    <main class="max-w-6xl mx-auto px-4 pt-12 pb-24 space-y-12">
+        
+        <!-- Top Half: Status Grid Elements surrounding Logo -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
             
-            <!-- Premium Title Typography -->
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter font-header text-white leading-none">
-                STEAL HEARTS. <br>
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 neon-text-glow">RULE THE SMP.</span>
-            </h1>
-            
-            <p class="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-                Welcome to POPSmP Network. Engage in relentless high-stakes Lifesteal PvP, bypass enemy traps, claim heavy faction coordinates, and build your health empire!
-            </p>
-            
-            <!-- Direct Connection UI Hub Element -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 max-w-md mx-auto">
-                <div class="w-full bg-black/60 border border-purple-500/20 rounded-xl px-4 py-3.5 flex items-center justify-between font-mono text-purple-400 text-xs sm:text-sm shadow-2xl">
-                    <span id="ip-target" class="tracking-wide">://popsmpnetwork.com</span>
-                    <button onclick="executeIPCopy()" class="ml-3 text-gray-500 hover:text-purple-400 transition-colors" title="Copy Address">
-                        <i id="copy-status-icon" class="far fa-copy"></i>
+            <!-- Left Side IP Anchor Box -->
+            <div class="premium-card p-6 rounded-2xl flex items-center space-x-4">
+                <div class="w-12 h-12 bg-red-900/30 border border-red-700/40 rounded-xl flex items-center justify-center text-red-500 text-xl">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <span class="block text-[10px] uppercase font-bold tracking-widest text-gray-500">Server IP</span>
+                    <button onclick="copyServerIPAddress()" class="block text-base font-semibold text-white tracking-wide hover:text-purple-400 transition-colors text-left truncate w-full">
+                        <span id="ip-text">://popsmpnetwork.com</span>
                     </button>
+                    <span class="block text-xs text-green-400 font-medium mt-1 flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span> 428 players online
+                    </span>
                 </div>
-                <a href="https://discord.gg/" target="_blank" class="w-full sm:w-auto px-7 py-4 bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold rounded-xl flex items-center justify-center gap-2.5 tracking-wider text-sm transition-all duration-200 shadow-lg shadow-indigo-600/10">
-                    <i class="fab fa-discord text-lg"></i> DISCORD
-                </a>
             </div>
+
+            <!-- Center Logo Block Visual Anchor -->
+            <div class="text-center py-6 lg:py-0 flex flex-col items-center justify-center space-y-4">
+                <div class="w-32 h-32 bg-gradient-to-br from-purple-700 via-pink-600 to-purple-800 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300 border border-white/10 relative group">
+                    <div class="absolute inset-0 bg-purple-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all"></div>
+                    <span class="text-5xl font-black font-header tracking-tighter text-white text-glow relative z-10">POP</span>
+                </div>
+            </div>
+
+            <!-- Right Side Discord Member Box -->
+            <div class="premium-card p-6 rounded-2xl flex items-center space-x-4">
+                <div class="w-12 h-12 bg-indigo-900/30 border border-indigo-700/40 rounded-xl flex items-center justify-center text-[#5865F2] text-xl">
+                    <i class="fab fa-discord"></i>
+                </div>
+                <div>
+                    <span class="block text-[10px] uppercase font-bold tracking-widest text-gray-500">Community</span>
+                    <a href="https://discord.gg" target="_blank" class="block text-base font-semibold text-white hover:text-indigo-400 transition-colors">Discord</a>
+                    <span class="block text-xs text-indigo-400 font-medium mt-1 flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> 2,185 members online
+                    </span>
+                </div>
+            </div>
+
         </div>
-    </header>
 
-    <!-- Main Navigation Modules -->
-    <main class="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 space-y-36">
+        <!-- Center Typography Intro Segment -->
+        <div class="text-center space-y-2 py-6">
+            <h1 class="text-4xl font-extrabold text-white tracking-tight">POPSmP</h1>
+            <p class="text-gray-400 text-sm tracking-wide font-light">A next-gen Minecraft experience.</p>
+        </div>
 
-        <!-- Active Mode Matrix Section -->
-        <section id="gamemodes" class="space-y-12">
-            <div class="text-center space-y-3">
-                <h2 class="text-3xl md:text-4xl font-black font-header tracking-tight text-white uppercase">⚡ Featured Arena Modules</h2>
-                <div class="w-16 h-1 bg-purple-500 mx-auto rounded-full"></div>
+        <!-- Bottom Half: Call to Action Row Splits -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Left Interaction Module Card -->
+            <div class="premium-card p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                <div class="space-y-2">
+                    <span class="block text-[10px] uppercase font-bold tracking-widest text-gray-500">Your Profile</span>
+                    <h3 class="text-xl font-bold text-white tracking-tight">Sign in to get started</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+                        Link your Discord and your Minecraft account to manage 2FA and password resets seamlessly.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://discord.gg" target="_blank" class="inline-flex items-center gap-2.5 px-6 py-3.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors shadow-md shadow-red-900/20">
+                        <i class="fab fa-discord text-sm"></i> Login with Discord
+                    </a>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="cyber-box p-8 rounded-2xl hover:border-purple-500/40 transform hover:-translate-y-1 transition-all duration-300">
-                    <div class="w-12 h-12 bg-red-500/10 border border-red-500/30 text-red-400 rounded-xl flex items-center justify-center text-xl mb-6 shadow-md shadow-red-500/5"><i class="fas fa-skull-crossbones"></i></div>
-                    <h3 class="text-lg font-bold font-header text-white mb-2 uppercase tracking-wide">Extreme Lifesteal</h3>
-                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">Eliminating targeted opponents extracts their heart containers. If you lose all your health blocks, your network access safely logs out automatically!</p>
+            <!-- Right Donation Store Module Card -->
+            <div class="premium-card p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-gray-500">
+                        <i class="fas fa-heart text-pink-500"></i>
+                        <span>Support Us</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white tracking-tight">Consider donating</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed font-light">
+                        It helps us keep the lights on, the maps fresh, and the lag away so our Lifesteal nodes remain flawless.
+                    </p>
                 </div>
-                <!-- Card 2 -->
-                <div class="cyber-box p-8 rounded-2xl hover:border-purple-500/40 transform hover:-translate-y-1 transition-all duration-300">
-                    <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/30 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-6 shadow-md shadow-purple-500/5"><i class="fas fa-shield-cat"></i></div>
-                    <h3 class="text-lg font-bold font-header text-white mb-2 uppercase tracking-wide">Grief Protection Logs</h3>
+                <div>
+                    <a href="https://tebex.io" target="_blank" class="text-pink-500 hover:text-pink-400 font-bold text-xs uppercase tracking-widest flex items-center gap-1.5 transition-colors">
+                        <span>Open store</span> <i class="fas fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Absolute Base Notification Alert Bar -->
+    <div id="copy-toast" class="fixed bottom-5 right-5 bg-purple-950 border border-purple-500 text-purple-200 px-5 py-3.5 rounded-xl shadow-2xl transition-all duration-300 transform translate-y-20 opacity-0 z-50 flex items-center gap-2 text-xs font-bold uppercase tracking-wider">
+        <i class="fas fa-check-circle text-green-400 text-sm"></i>
+        <span id="toast-txt">Copied!</span>
+    </div>
+
+    <!-- Interactive Scripts for Interface -->
+    <script>
+        function copyServerIPAddress() {
+            const ipVal = document.getElementById('ip-text').innerText;
+            const holder = document.createElement('textarea');
+            holder.value = ipVal;
+            holder.style.position = 'fixed';
+
 
